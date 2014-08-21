@@ -11,7 +11,6 @@ class UserManager(BaseUserManager):
         if not email:
             raise ValueError("User must have an email address")
 
-
         validate_email(email)
         self.validate_password(password)
 

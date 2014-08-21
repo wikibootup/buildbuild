@@ -18,7 +18,6 @@ class TeamManager(models.Manager):
             self.validate_website_url(kwargs["website_url"])
             team.website_url = kwargs["website_url"]
 
-
         team.save(using = self._db)
         return team
 
@@ -38,10 +37,8 @@ class TeamManager(models.Manager):
             raise ValidationError("Contact number cannot contain more than 20 digits")
 
     def validate_website_url(self, website_url):
-        if len(website_url) > 20:
+        if len(website_url) > 80:
             raise ValidationError("Website URL cannot contain more than 80 characters")
-
-
 
 class Team(models.Model):
     """
