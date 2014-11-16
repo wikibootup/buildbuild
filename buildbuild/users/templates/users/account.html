@@ -1,12 +1,8 @@
-{% extends "base.html" %}
+<a href="/"><- go back</a>
 
-{% block content %}
-    <a href="/"><- go back</a>
-
-        <h2>{{ user_account }} 's Account page </h2>
-        <ul>
-            <li>Email : {{user_account.email }}</li>
-            <li>Name : {{ user_account.name }}</li>
-            <li>Phone number : {{ user_account.phonenumber }}</li>
-        </ul>
-{% endblock %}
+    <h2>{{ user_account }} 's Account page </h2>
+    <ul>
+        <li>Email : {{user_account.email }}</li>
+        <li>Name : {{ user_account.name }}</li>
+        <li>Phone number : {{ user_account.phonenumber }}</li>
+    </ul>
